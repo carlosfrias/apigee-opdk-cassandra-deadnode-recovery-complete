@@ -6,4 +6,4 @@
     regexp: '^{{ item }}'
     dest: "{{ apigee_installation_home }}/etc/defaults.sh"
   with_items:
-  - 'JVM_OPTS="$JVM_OPTS.*-Dcassandra.replace_address'
+  - 'JVM_OPTS="$JVM_OPTS\s-Dcassandra.replace_address'
