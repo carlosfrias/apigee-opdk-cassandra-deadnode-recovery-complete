@@ -3,7 +3,7 @@
 - name: Clear replace_address from defaults.sh
   lineinfile:
     state: absent
-    regexp: "^{{ item }}"
+    regexp: ".*{{ item }}"
     dest: "{{ apigee_installation_home }}/etc/defaults.sh"
   with_items:
-  - 'JVM_OPTS="$JVM_OPTS -Dcassandra.replace_address'
+  - '-Dcassandra.replace_address'
